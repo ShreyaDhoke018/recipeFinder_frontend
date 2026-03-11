@@ -330,6 +330,7 @@ interface SplashDrop {
   vx: number; vy: number;
   life: number; maxLife: number;
   r: number; emoji: string;
+  opacity?: number;
 }
 
 function PotCanvas({ ingredients, isStirring }: {
@@ -358,7 +359,7 @@ function PotCanvas({ ingredients, isStirring }: {
     splashDrops: [] as SplashDrop[],
     ingredients: [] as IngredientRow[],
     // ── Steam ──
-    steamPuffs: [] as {x:number,y:number,vx:number,vy:number,r:number,life:number,maxLife:number}[],
+    steamPuffs: [] as {x:number,y:number,vx:number,vy:number,r:number,life:number,maxLife:number, opacity?: number;}[],
     steamTimer: 0,
   });
 
